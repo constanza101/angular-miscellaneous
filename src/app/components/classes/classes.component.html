@@ -15,3 +15,13 @@
         (click)="properties.danger= !properties.danger" 
         [ngClass]="{'btn-danger': !properties.danger, 'btn-info': properties.danger }"> 
         Change property </button>
+
+<hr>
+
+<h3> Proceso asíncrono </h3>
+<button (click)="runProcess()"
+        type="button" 
+        class="btn btn-info m-1" 
+        s> 
+        <i [ngClass]="{'fa-save':!loading, 'fa-sync-alt fa-spin': loading}"  class="fa m-1"></i>
+        Save changes</button>
