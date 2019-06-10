@@ -22,6 +22,8 @@
 <button (click)="runProcess()"
         type="button" 
         class="btn btn-info m-1" 
-        s> 
+        [disabled]= loading> 
         <i [ngClass]="{'fa-save':!loading, 'fa-sync-alt fa-spin': loading}"  class="fa m-1"></i>
-        Save changes</button>
+        <span *ngIf="!loading"> Save changes </span>
+        <span *ngIf="loading"> Please  wait </span>
+</button>
