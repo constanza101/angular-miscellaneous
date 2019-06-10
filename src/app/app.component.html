@@ -18,4 +18,21 @@
 
 <app-classes></app-classes>
 
+<hr>
+
+<h3> Customized directives </h3>
+
+<p appHighlighted="yellow" > Let's highlight this paragraph with a customized directive, by using its selector as an attribute of this "p tag". <br>
+    - Import "ElementRef" from @angular/core into the directive TS to be able to use it in the HTML where we are calling this directive.(and add it to the constructor as well.)
+    
+    <br><br>EVENT LISTENING: <br>
+    - Import "HostListener" from @angular/core into the directive TS - dont inject into the constructor.
+    <br><br>
+    // listen when the mouse "enters" the element:<br>
+    @HostListener('mouseenter') mouseEntro() // mouseEntro() es un ALIAS. <br>
+      this._elementRef.nativeElement.style.backgroundColor = 'yellow'; <br><br>
+    
+    
+</p>
+
 </div>
