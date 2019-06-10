@@ -1,0 +1,17 @@
+<div [ngClass]="alertType"  class="alert " role="alert">
+    This is a <strong> "{{ alertType}}" </strong> alert—check it out!
+</div>
+
+<button type="button" class="btn btn-info m-1" (click)="alertType = 'alert-info'" > Info </button>
+<button type="button" class="btn btn-success m-1" (click)="alertType = 'alert-success'" > Success </button>
+<button type="button" class="btn btn-warning m-1" (click)="alertType = 'alert-warning'" > Warning </button>
+<button type="button" class="btn btn-danger m-1" (click)="alertType = 'alert-danger'" > Danger </button>
+
+<hr>
+
+<h3 [ngClass]="{'text-danger':properties.danger, 'text-info': !properties.danger}" >Hola Mundo!</h3>
+<button type="button" 
+        class="btn m-1" 
+        (click)="properties.danger= !properties.danger" 
+        [ngClass]="{'btn-danger': !properties.danger, 'btn-info': properties.danger }"> 
+        Change property </button>
